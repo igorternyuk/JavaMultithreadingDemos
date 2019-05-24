@@ -7,7 +7,7 @@ import java.util.logging.Logger;
  * 
  * @author Igor Ternyuk <xmonad100 at gmail.com>
  */
-public class Demo6 {
+public class WaitNotifyDemo {
     
     static class DepositThread extends Thread{
         private final Account account;
@@ -28,7 +28,7 @@ public class Demo6 {
                     Thread.sleep(100);
                     System.out.println("Despositing... Current balance = $" + account.getBalance());
                 } catch (InterruptedException ex) {
-                    Logger.getLogger(Demo6.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(WaitNotifyDemo.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         }
@@ -69,7 +69,7 @@ public class Demo6 {
             
             System.out.println("End balance = $" + account.getBalance());
         } catch (InterruptedException ex) {
-            Logger.getLogger(Demo6.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(WaitNotifyDemo.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
@@ -85,7 +85,7 @@ public class Demo6 {
             System.out.println("Widthraw finished. End balance: $" + account.getBalance());
 
         } catch (InterruptedException ex) {
-            Logger.getLogger(Demo6.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(WaitNotifyDemo.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
